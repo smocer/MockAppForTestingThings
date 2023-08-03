@@ -1,0 +1,69 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "TypeDecl",
+        "name": "PrinterClass",
+        "printedName": "PrinterClass",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "printSomeLines",
+            "printedName": "printSomeLines()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7TestLib12PrinterClassC14printSomeLinesyyFZ",
+            "mangledName": "$s7TestLib12PrinterClassC14printSomeLinesyyFZ",
+            "moduleName": "TestLib",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PrinterClass",
+                "printedName": "TestLib.PrinterClass",
+                "usr": "s:7TestLib12PrinterClassC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:7TestLib12PrinterClassCACycfc",
+            "mangledName": "$s7TestLib12PrinterClassCACycfc",
+            "moduleName": "TestLib",
+            "implicit": true,
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:7TestLib12PrinterClassC",
+        "mangledName": "$s7TestLib12PrinterClassC",
+        "moduleName": "TestLib",
+        "isOpen": true,
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "hasMissingDesignatedInitializers": true
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": []
+}
