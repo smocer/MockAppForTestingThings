@@ -19,6 +19,7 @@ let package = Package(
         .target(
             name: "FirebaseWrapper",
             dependencies: [
+                // Begin FirebaseAnalytics
                 .target(name: "FirebaseAnalytics"),
                 .target(name: "FBLPromises"),
                 .target(name: "FirebaseAnalyticsSwift"),
@@ -29,7 +30,32 @@ let package = Package(
                 .target(name: "GoogleAppMeasurementIdentitySupport"),
                 .target(name: "GoogleUtilities"),
                 .target(name: "nanopb"),
+                // End FirebaseAnalytics
+                //
+                // Begin FirebaseCrashlytics
+                .target(name: "FirebaseCoreExtension"),
+                .target(name: "FirebaseCrashlytics"),
+                .target(name: "FirebaseSessions"),
+                .target(name: "GoogleDataTransport"),
+                .target(name: "PromisesSwift"),
+                // End FirebaseCrashlytics
+                //
+                // Begin FirebaseMessaging
+                .target(name: "FirebaseMessaging"),
+//                .target(name: "GoogleDataTransport"),
+                // End FirebaseMessaging
+                //
+                // Begin FirebasePerformance
+                .target(name: "FirebaseABTesting"),
+//                .target(name: "FirebaseCoreExtension"),
+                .target(name: "FirebasePerformance"),
+                .target(name: "FirebaseRemoteConfig"),
+//                .target(name: "FirebaseSessions"),
+//                .target(name: "GoogleDataTransport"),
+//                .target(name: "PromisesSwift"),
+                // End FirebasePerformance
             ]),
+        // Begin FirebaseAnalytics
         .binaryTarget(name: "FirebaseAnalytics", path: "artifacts/FirebaseAnalytics/FirebaseAnalytics.xcframework"),
         .binaryTarget(name: "FBLPromises", path: "artifacts/FirebaseAnalytics/FBLPromises.xcframework"),
         .binaryTarget(name: "FirebaseAnalyticsSwift", path: "artifacts/FirebaseAnalytics/FirebaseAnalyticsSwift.xcframework"),
@@ -39,6 +65,30 @@ let package = Package(
         .binaryTarget(name: "GoogleAppMeasurement", path: "artifacts/FirebaseAnalytics/GoogleAppMeasurement.xcframework"),
         .binaryTarget(name: "GoogleAppMeasurementIdentitySupport", path: "artifacts/FirebaseAnalytics/GoogleAppMeasurementIdentitySupport.xcframework"),
         .binaryTarget(name: "GoogleUtilities", path: "artifacts/FirebaseAnalytics/GoogleUtilities.xcframework"),
-        .binaryTarget(name: "nanopb", path: "artifacts/FirebaseAnalytics/nanopb.xcframework")
+        .binaryTarget(name: "nanopb", path: "artifacts/FirebaseAnalytics/nanopb.xcframework"),
+        // End FirebaseAnalytics
+        //
+        // Begin FirebaseCrashlytics
+        .binaryTarget(name: "FirebaseCoreExtension", path: "artifacts/FirebaseCrashlytics/FirebaseCoreExtension.xcframework"),
+        .binaryTarget(name: "FirebaseCrashlytics", path: "artifacts/FirebaseCrashlytics/FirebaseCrashlytics.xcframework"),
+        .binaryTarget(name: "FirebaseSessions", path: "artifacts/FirebaseCrashlytics/FirebaseSessions.xcframework"),
+        .binaryTarget(name: "GoogleDataTransport", path: "artifacts/FirebaseCrashlytics/GoogleDataTransport.xcframework"),
+        .binaryTarget(name: "PromisesSwift", path: "artifacts/FirebaseCrashlytics/PromisesSwift.xcframework"),
+        // End FirebaseCrashlytics
+        //
+        // Begin FirebaseMessaging
+        .binaryTarget(name: "FirebaseMessaging", path: "artifacts/FirebaseMessaging/FirebaseMessaging.xcframework"),
+//        .binaryTarget(name: "GoogleDataTransport", path: "artifacts/FirebaseMessaging/GoogleDataTransport.xcframework"),
+        // End FirebaseMessaging
+        //
+        // Begin FirebasePerformance
+        .binaryTarget(name: "FirebaseABTesting", path: "artifacts/FirebasePerformance/FirebaseABTesting.xcframework"),
+//        .binaryTarget(name: "FirebaseCoreExtension", path: "artifacts/FirebasePerformance/FirebaseCoreExtension.xcframework"),
+        .binaryTarget(name: "FirebasePerformance", path: "artifacts/FirebasePerformance/FirebasePerformance.xcframework"),
+        .binaryTarget(name: "FirebaseRemoteConfig", path: "artifacts/FirebasePerformance/FirebaseRemoteConfig.xcframework"),
+//        .binaryTarget(name: "FirebaseSessions", path: "artifacts/FirebasePerformance/FirebaseSessions.xcframework"),
+//        .binaryTarget(name: "GoogleDataTransport", path: "artifacts/FirebasePerformance/GoogleDataTransport.xcframework"),
+//        .binaryTarget(name: "PromisesSwift", path: "artifacts/FirebasePerformance/PromisesSwift.xcframework"),
+        // End FirebasePerformance
     ]
 )
