@@ -9,6 +9,7 @@ import UIKit
 import Darwin
 import Target2
 import TestLibWrapper
+import FirebaseWrapper
 //import FirebaseAnalytics
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -27,11 +28,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func doMagic() {
-//        WrapperClass.doNothing()
         PrinterClass.printSomeLines()
-
-//        let app = FirebaseApp.app()
-//        let fir = FirebaseOptions(contentsOfFile: "")
-//        let firebase = FIRInAppMessagingDismissType(rawValue: 0)
+        let app = FirebaseApp.app()
+        let opts = FirebaseOptions(contentsOfFile: "")
     }
 }

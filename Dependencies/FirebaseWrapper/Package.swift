@@ -18,7 +18,18 @@ let package = Package(
     targets: [
         .target(
             name: "FirebaseWrapper",
-            dependencies: [.target(name: "FirebaseAnalytics")]),
+            dependencies: [
+                .target(name: "FirebaseAnalytics"),
+                .target(name: "FBLPromises"),
+                .target(name: "FirebaseAnalyticsSwift"),
+                .target(name: "FirebaseCore"),
+                .target(name: "FirebaseCoreInternal"),
+                .target(name: "FirebaseInstallations"),
+                .target(name: "GoogleAppMeasurement"),
+                .target(name: "GoogleAppMeasurementIdentitySupport"),
+                .target(name: "GoogleUtilities"),
+                .target(name: "nanopb"),
+            ]),
         .binaryTarget(name: "FirebaseAnalytics", path: "artifacts/FirebaseAnalytics/FirebaseAnalytics.xcframework"),
         .binaryTarget(name: "FBLPromises", path: "artifacts/FirebaseAnalytics/FBLPromises.xcframework"),
         .binaryTarget(name: "FirebaseAnalyticsSwift", path: "artifacts/FirebaseAnalytics/FirebaseAnalyticsSwift.xcframework"),
